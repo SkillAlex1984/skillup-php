@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+    font-size: x-large;
+}
+input {
+    font-family: "Comic Sans MS";
+    color: red;
+}
+input.person {
+    color: blue;
+}
+
+input#first_name {
+    color: aqua;
+}
+div {
+    border-bottom: 1px solid gray;
+}
+form div {
+    margin-bottom: 15px;
+}
+form input {
+    background-color: lightgray;
+}
+
+form div > input {
+    background-color: darkblue;
+}
+label {
+    color: lime;
+}
+.block {
+    border: 3px solid darkred;
+    width: 50%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px;
+}
+.inside {
+        float:right;
+        width: 150px;
+        padding: 20px;
+        background: lightblue;
+    margin: 30px;
+    border-radius: 100px;
+
+}
