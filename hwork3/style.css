@@ -1,0 +1,13 @@
+div {
+    border: 2px dotted gray;
+    padding: 20px;
+}
+input {
+    margin: 10px;
+}
+textarea, button {
+    margin: 10px;
+}
+.field {
+    background-color: lightgray;
+}
