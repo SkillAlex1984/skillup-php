@@ -11,25 +11,40 @@
             <p>
                 <label>
                     <input type="checkbox" name="courses" value="1">
-                    <span>Это метка для чекбокса: нажмите на меня - чекбокс сменит галочку!</span>
+                    <span class="ramka">Это метка для чекбокса: нажмите на меня - чекбокс сменит галочку!</span>
                 </label>
             </p>
             <p>
                 <label>
                     <input type="checkbox" name="courses" value="2" checked>
-                    <span>Я отмечен по умолчанию!</span>
+                    <span class="ramka">Я отмечен по умолчанию!</span>
                 </label>
             </p>
             <p>
                 <label>
                 <input type="checkbox" name="courses" value="3" disabled>
-                <span>Я disabled!</span>
+                <span class="ramka">Я disabled!</span>
                 </label>
             </p>
 
             <div>
                 Это группа радиокнопок - только одна из них может быть отмечена!
+                <p>
+                    <label>
+                        <input type="radio" name="radio1" value="1">
+                        <span class="ramka">Это метка для радио</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="radio" name="cinema" value="2">
+                        <span class="ramka">Это метка для радио</span>
+                    </label>
+                </p>
             </div>
+            <label>
+                <input type="button" value="Отправить на сервер"
+            </label>
         </div>
     </form>
 

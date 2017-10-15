@@ -1,6 +1,8 @@
 div {
     border: 2px dotted gray;
     padding: 20px;
+    width: 50%;
+    margin: auto;
 }
 input {
     margin: 10px;
@@ -11,12 +13,25 @@ textarea, button {
 .field {
     background-color: lightgray;
 }
-strong {
+strong, li {
     color: red;
 }
-span {
+.ramka {
     border: 1px solid red;
 }
 form div > div {
     border: 1px solid black;
+}
+.redboll {
+    color: red;
+    font-weight: bolder;
+}
+h2 {color: green}
+.bluecirs {
+    font-style: italic;
+    color: blue;
+}
+.fiolcurs {
+    font-style: italic;
+    color: lightpink;
 }
