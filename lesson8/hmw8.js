@@ -1,3 +1,5 @@
-'use strict'
+'use strict';
 
-$('h2').html('!');
+
+$('h2').html('!!!!');
+
