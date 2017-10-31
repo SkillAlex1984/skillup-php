@@ -40,6 +40,7 @@ $(document).ready(function () {
         var target = $(this).attr('target'),
             href = $(this).attr('href');
 
+
       // самый простой метод  $(target).load(href);
       /* второй по сложности $.get(href, function (content){
             $(target).html(content);
