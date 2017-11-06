@@ -126,3 +126,37 @@ for (var Age in Person) {
         var age = 2017 - Person.Age;
 }
 console.log('Год рождения' + age);
+
+//Задание 3 как сделать метод? http://w3.org.ua/js/oop-v-js-metodyi-obekta/
+var assArray = {
+    'mas': [5, 6, 34, 12, 45],
+};
+var rezZad3 = 0;
+for (var i = 0; i < assArray['mas'].length; i++) {
+    rezZad3 += assArray['mas'][i];
+}
+console.log(rezZad3);
+// Задание 4 как выводить объект на HTML
+var arrayZ4 = {
+    '12345' : { 'носки' : 'duna',
+                'price' : 54,
+                'wight' : 200,
+                'link': 'http:\\wwww.p.ua',
+                'nal' : "Y",
+    },
+    '678910' : {    'shoes' : 'nike',
+                    'price' : 780,
+                    'wight' : 28,
+                    'link': 'http:\\wwww.p.ua',
+                    'nal' : "N",
+    }
+}
+console.log(arrayZ4);
+for (var key in arrayZ4) {
+    alert ('Ключ '+key+' содержит '+arrayZ4[key]);
+}
+/*for (var key in arrayZ4) {
+    document.write(key + arrayZ4[key] + '</br>');
+}*/
+// Задача 5
+
