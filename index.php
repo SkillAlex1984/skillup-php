@@ -1,6 +1,58 @@
 <?php
 
-$arr = ['Kolja'=>'200', 'Vasja'=>'300','Petja'=>'400'];
+//Работа с % задача 1
+$a = 17;
+$b = 3;
+$rez = $a%$b;
+echo $rez . '</br>';
+// задача 2
+
+$aZ2 = 12;
+$bZ2 = 2;
+$rezZ2 = $aZ2 % $bZ2 ;
+
+if ($rezZ2 > 0) {
+    echo 'не делится';
+} else {
+    echo 'делится' . $rezZ2;
+}
+
+// задача 3 Работа со степенью и корнем
+// задача 27
+$date = 'html css php';
+$arr = explode(' ', 'html css php');
+var_dump($arr);
+// задача 14
+$arrZ14 = [1, 2, 3, 4, 5];
+array_splice($arrZ14, 1, 2);
+var_dump($arrZ14);
+// задача 15
+$arrZadach15 = [1, 2, 3, 4, 5];
+$rezArr = [];
+$rezArr = array_splice($arrZadach15, 1, 3);
+var_dump($rezArr);
+// задача 1 Практика на комбинации функций
+$arrPractic = [1, 2, 3, 4, 5];
+$kol = count($arrPractic);
+$sum = array_sum($arrPractic);
+echo $sum / $kol;
+// задача 2 Практика на комбинации функций
+$arrZad2 = range(1, 100);
+$rezZ2 = array_sum($arrZad2);
+var_dump($rezZ2);
+// задача 3 Практика на комбинации функций
+$arrZad3 = range(1, 100);
+$strZad3 = implode('</br>', $arrZad3);
+echo $strZad3;
+// задача 4 Практика на комбинации функций
+$arrZad4 = array_fill(0, 10, 'x');
+var_dump($arrZad4);
+// задача 5 Практика на комбинации функций
+$arrZad5 = array_fill(0, 10, shuffle.mt_rand(1, 10));
+var_dump($arrZad5);
+
+
+/*$arr = ['Kolja'=>'8888888888', 'Vasja'=>'300','Petja'=>'400'];
 foreach ($arr as $key => $value) {
     echo $key . ' - ' . 'Zarplata ' .  $value . ' usd ' . PHP_EOL;
 }
