@@ -25,5 +25,6 @@
     <button type = "submit"> Заегистрироваться</button>
 
 </form>
+<p><a href="homework11.php">ВЫВЕСТИ БАЗУ НА ЭКРАН</a></p>
 </body>
 </html>
