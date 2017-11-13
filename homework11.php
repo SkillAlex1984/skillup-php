@@ -29,4 +29,4 @@ $data = file( $file_name );
     endforeach;
     ?>
 </table>
-<a href="index.php"><strong>НАЗАД К РЕГИСТРАЦИИ</strong></a>
+<a href="index1.php"><strong>НАЗАД К РЕГИСТРАЦИИ</strong></a>

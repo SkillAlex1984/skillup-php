@@ -1,8 +1,5 @@
  <?php
-    # Путь к файлу
     $file_name = "user.txt";
-
-    # Считываем информацию по строкам
     $data = file( $file_name );
     ?>
     <style>
@@ -18,10 +15,7 @@
         <td>С правилами согласен</td>
         </thead>
         <?php
-        # В цикле обходим массив данных
         foreach( $data as $value ):
-
-            # Разбиваем строку по |
             $value = explode( "\t", $value );
             ?>
 
@@ -36,4 +30,4 @@
         endforeach;
         ?>
     </table>
- <a href="index.php"><strong>НАЗАД К РЕГИСТРАЦИИ</strong></a>
+ <a href="index1.php"><strong>НАЗАД К РЕГИСТРАЦИИ</strong></a>

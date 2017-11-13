@@ -1,9 +1,13 @@
 <?php
 
-include 'lib_home.php';
+include 'lib.php';
 $user = [
-    'email' => ''
-    ];
+    'first_name' => '',
+    'last_name' => '',
+    'email' => '',
+    'phone' => '',
+    'confirm' => false,
+];
 
 $errors = [];
 
@@ -14,8 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!$errors) {
         saveUser2($user);
 
-        header('Location: /success_home.html');
+        header('Location: /success.html');
         exit();
     }
 }
-include 'form_home.php';
+
+include 'form.php';

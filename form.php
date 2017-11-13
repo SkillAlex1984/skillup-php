@@ -11,11 +11,11 @@
 </head>
 <body>
 
-    <?php foreach ($errors as $error) { ?>
+<?php foreach ($errors as $error) { ?>
         <p class = 'error'><?= $error ?></p>
 <?php } ?>
 
-<form action = 'index.php' method="post">
+<form action = 'index1.php' method="post">
     <label> Имя <input name = 'first_name' value="<?= $user['first_name'] ?>"> </label>
     <label> Фамилия <input name = 'last_name' value='<?= $user['last_name'] ?>'> </label>
     <label> Email <input type = 'email' name = 'email' value="<?= $user['email'] ?>"> </label>
