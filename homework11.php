@@ -1,6 +1,6 @@
 <?php
 $file_name = "user.txt";
-$data = file( $file_name );
+$data = file($file_name );
 ?>
 <style>
     td {text-align: center};
@@ -29,4 +29,4 @@ $data = file( $file_name );
     endforeach;
     ?>
 </table>
-<a href="index1.php"><strong>НАЗАД К РЕГИСТРАЦИИ</strong></a>
+<a href="index.php"><strong>НАЗАД К РЕГИСТРАЦИИ</strong></a>

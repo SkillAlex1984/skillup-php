@@ -1,19 +1,16 @@
 <?php
 
 include 'lib.php';
-$user = [
-    'first_name' => '',
-    'last_name' => '',
-    'email' => '',
-    'phone' => '',
-    'confirm' => false,
-];
+include 'User.php';
+include 'PremiumUser.php';
+$user = new PremiumUser('Tecn');
+
 
 $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $user = processRequest ($user);
-    $errors = validateUser ($user);
+    $errors = $user->processRequest($_POST);
+   // $user->processRequest($_POST);
 
     if (!$errors) {
         saveUser2($user);

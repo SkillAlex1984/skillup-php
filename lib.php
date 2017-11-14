@@ -23,21 +23,21 @@ function validateUser (array $user) {
     return $errors;
 }
 
-function saveUser (array $user){
-    if (file_exists(USER_FILE)) {
-        $existing_users = file_get_contents(USER_FILE);
-    } else {
-        $existing_users = '';
-    }
+//function saveUser (User $user){
+  //  if (file_exists(USER_FILE)) {
+    //    $existing_users = file_get_contents(USER_FILE);
+   // } else {
+     //   $existing_users = '';
+    //}
 
-    $user_info = implode("\t", $user);
-    $existing_users .=$user_info . PHP_EOL;
-    file_put_contents(USER_FILE, $existing_users);
-}
+ //   $user_info = implode("\t", $user);
+   // $existing_users .=$user_info . PHP_EOL;
+    //file_put_contents(USER_FILE, $existing_users);
+//}
 
-function saveUser2 (array $user){
+function saveUser2 (User $user){
     $file = fopen(USER_FILE, 'a');
-    $user_info = implode("\t", $user) . PHP_EOL;
+    $user_info = $user . PHP_EOL;
     fputs($file,$user_info);
     fclose($file);
 }
