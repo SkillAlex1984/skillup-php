@@ -75,26 +75,3 @@ $driver = new Driver();
 $driver->setDriverTime(12);
 $driver->setCategory('A,B, C');
 echo ' водительский стаж', $driver->getCategory() . ' категория вождения ', $driver->getDriverTime();
-
-// Задача 7
-
-/*include 'User.php';
-include 'PremiumUser.php';
-$user = new PremiumUser('Tecn');
-
-
-$errors = [];
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $errors = $user->processRequest($_POST);
-   // $user->processRequest($_POST);
-
-    if (!$errors) {
-        saveUser2($user);
-
-        header('Location: /success.html');
-        exit();
-    }
-}
-
-include 'form.php';*/
