@@ -3,6 +3,12 @@
 include 'Worker.php';
 include 'Worker2.php';
 include 'Worker3.php';
+include 'User5.php';
+include 'Worker5.php';
+include 'Student.php';
+include 'Driver.php';
+
+
 
 // Задача 1
 $obj1 = new Worker();
@@ -40,8 +46,37 @@ echo 'возраст не корректный - он не должен меня
 
 $worker4 = new Worker3('Dima', 1000);
 $worker4->age = 25;
-echo 'Произведение возраста и зарплаты ', $worker4->age * $worker4->getSalary();
+echo 'Произведение возраста и зарплаты ', $worker4->age * $worker4->getSalary() . '</br>';
 
+// Задача 5
+$worker5 = new Worker5();
+$worker5->setName('Ivan');
+$worker5->setAge(25);
+$worker5->setSalary(1000);
+
+$worker52 = new Worker5();
+$worker52->setName('Vasja');
+$worker52->setAge(26);
+$worker52->setSalary(2000);
+
+echo 'Задача 5 - сумма зарплат ', $worker5->getSalary() + $worker52->getSalary() . '</br>';
+
+$student = new Student();
+$student->setSch(20);
+$student->setCurs(5);
+$student->setName('Арнольд');
+$student->setAge(60);
+
+echo 'Задача 5 : Имя - ', $student->getName() . ' его Стипендия - ', $student->getSch() .
+    ' Курс ', $student->getCurs() . '</br>';
+
+// Задача 6
+$driver = new Driver();
+$driver->setDriverTime(12);
+$driver->setCategory('A,B, C');
+echo ' водительский стаж', $driver->getCategory() . ' категория вождения ', $driver->getDriverTime();
+
+// Задача 7
 
 /*include 'User.php';
 include 'PremiumUser.php';
