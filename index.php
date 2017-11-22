@@ -1,34 +1,42 @@
 <?php
-session_start();
- $error ='';
-if (isset($_POST['email'])) {
-    $_SESSION['user'] = $_POST['user'];
-    header('Location: form2.php');
-    exit();
+include 'init.php';
+$error ='';
+if (isset($_POST['username'])) {
+    if ($_POST['username'] == 'user' && $_POST['password'] == 'pass') {
+        $_SESSION['user'] = $_POST['username'];
+        header('Location: index.php');
+        exit();
+    }
+    else {
+        $error = 'не верное имя пользователя';
+        unset($_SESSION['user']);
+    }
 }
-else {
-    $error = 'не верное имя пользователя';
-    unset($_SESSION['email']);}?>
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-
-    <form method="post">
-        <label>
-            Введите email
-            <input type="email" name="email">
-        </label>
-        <label>
-            <input type="submit">
-        </label>
-    </form>
-
-
-
+Вход
+<?=$error?>
+<form method="post">
+    <label>
+        Username
+        <input name = "username">
+    </label>
+    <label>
+        Password
+        <input type = password name="password">
+    </label>
+    <button type="submit">Login</button>
+</form>
 </body>
 </html>
