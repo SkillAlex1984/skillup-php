@@ -1,11 +1,34 @@
 <?php
-include 'init.php';
+session_start();
+ $error ='';
+if (isset($_POST['email'])) {
+    $_SESSION['user'] = $_POST['user'];
+    header('Location: form2.php');
+    exit();
+}
+else {
+    $error = 'не верное имя пользователя';
+    unset($_SESSION['email']);}?>
 
-// установили setcookie('user', 'tester', time() + 3 * 3600);
-// убрали
-setcookie('user', '', time() - 3 * 3600);
-//$_COOKIE['remember_me'] = 'some user';
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
 
-<a href="readcookie.php"> Узнать значение куки</a>
-<a href="logout.php">EXIT</a>
+    <form method="post">
+        <label>
+            Введите email
+            <input type="email" name="email">
+        </label>
+        <label>
+            <input type="submit">
+        </label>
+    </form>
+
+
+
+</body>
+</html>
