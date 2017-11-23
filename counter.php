@@ -1,10 +1,10 @@
 <?php
 session_start();
-if (!isset($_SESSION['counter'])) {
-    $_SESSION['counter'] = 1;
+if (!isset($_SESSION['count'])) {
+    echo 'Вы еще не обновляли страницу';
+    $_SESSION['count'] = 0;
 } else {
-    $_SESSION['counter'] = $_SESSION['counter'] + 1;
+    $_SESSION['count'] = $_SESSION['count'] + 1;
+    echo 'Количество обновлений - '.$_SESSION['count'];
 }
-echo 'Вы обновили эту страницу '.$_SESSION['counter'].' раз!';
-
 ?>
