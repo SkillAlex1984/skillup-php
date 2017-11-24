@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Форма один</title>
-</head>
-<body>
-    <h1>Форма один</h1>
-        <form method="post">
-            <label>
-                <input type="email" name="useremail">
-            </label>
-            <label>
-                <input type="submit" value="Сохранить email">
-            </label>
-        </form>
-    <?php
-    if (isset($_POST['useremail'])) {
-        session_start();
-        $_SESSION['useremail'] = $_POST['useremail'];
-    }
-    ?>
-    <a href="form2.php">Перейти на форму два</a>
-</body>
-</html>
+<?php
+
+include 'Worker.php';
+
+
+$pdo = new PDO('mysql:host=localhost;dbname=skillup;charset=utf8','root', '');
+//$sql = 'SELECT * FROM workers WHERE id = 3';
+$salary = 'SELECT * FROM workers WHERE salary = 500';
+//$result = $pdo->query($salary); это простой вариант
+$result = $pdo->prepare($salary);  // это подготовленый
+$result->execute(['salary' => 500]); // запрос
+
+while ($row = $result->fetchObject(Worker::class)) {
+    var_dump($row);
+}
