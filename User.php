@@ -6,13 +6,9 @@
  * Time: 22:58
  */
 
-class Worker
+class User
 {
-    public $id;
+    //public $id;
 
-    public $name;
-
-    public $age;
-
-    public $salary;
+    //public $name;
 }
