@@ -3,7 +3,6 @@
 define('USER_FILE', __DIR__ . '/user.txt');
 function processRequest (array $user) {
     foreach ($user as $field => $value) {
-        // $user[$field] = $_POST[$field];
         $user[$field] = isset($_POST[$field]) ? $_POST[$field] : '';
     }
     return $user;
