@@ -1,26 +1,54 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8_general_ci">
+    <title>БЛОГ</title>
 
-include 'lib.php';
-$user = [
-    'first_name' => '',
-    'last_name' => '',
-    'email' => '',
-    'phone' => '',
-    'confirm' => false,
-];
+</head>
+<body>
+<h1>Здесь будет список комментариев</h1>
 
-$errors = [];
+<p style="border: 4px double black;"><strong>Список популярное” из 5 самых коментируемых
+        записей только здесь надо переделать селект по колву коментариев:</strong><br>
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $user = processRequest ($user);
-    $errors = validateUser ($user);
+    <?php
 
-    if (!$errors) {
-        saveUser2($user);
-
-        header('Location: /success.html');
-        exit();
+    $dbcon = new PDO
+    ('mysql:host=localhost; dbname=comments', 'root', '');
+    $data = $dbcon->query('SELECT * from comments_list ORDER BY date DESC LIMIT 1, 5');
+    $data->setFetchMode(PDO::FETCH_ASSOC);
+    while ($row = $data->fetch()) {
+        echo $row['date'] . $row['name'] . $row['text_comment'] . "<br>";
     }
-}
+    ?>
+</p>
 
-include 'form.php';
+<p style="border: 4px double black;"><strong>Список всех записей только здесь надо переделать селект по колву коментариев:</strong><br>
+    <?php
+        $dbcon = new PDO
+        ('mysql:host=localhost; dbname=comments', 'root', '');
+        $dataAllList = $dbcon->query('SELECT * from comments_list ORDER BY date DESC');
+        $dataAllList->setFetchMode(PDO::FETCH_ASSOC);
+        $piseText = '';
+        while ($row = $dataAllList->fetch()) {
+            $piseText = substr($row['text_comment'], 0, 10);
+            echo "Дата:" . $row['date'] . $row['name'] . $piseText . "<br>";
+        }
+    ?>
+
+</p>
+
+<form action='addRow.php' method="post">
+    <label> Имя <input name='user_name'</label>
+    <label> Комментарий <input name='comment'> </label>
+    <?php
+
+    ?>
+    <button type="submit"> Сохранить</button>
+
+</form>
+</body>
+</html>
+
+
+
