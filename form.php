@@ -10,13 +10,13 @@
     </style>
 </head>
 <body>
-    <form action = 'index.php' method="post">
-        <label> Имя <input name = 'user_name'> </label>
-        <label> Комментарий <input name = 'comment'> </label>
-            <?php
+<form action = 'index.php' method="post">
+    <label> Имя <input name = 'user_name'> </label>
+    <label> Комментарий <input name = 'comment'> </label>
+    <?php
 
-            ?>
-        <button type = "submit"> Сохранить</button>
+    ?>
+    <button type = "submit"> Сохранить</button>
 </form>
 </body>
 </html>
